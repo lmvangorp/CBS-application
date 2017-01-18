@@ -1,0 +1,273 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+    <title>CBS - Employment Application</title>
+    <script src="../scripts/angular.js"></script>
+    <script src="../scripts/app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="GreetingController">
+{{ greeting }}
+    <div class="form-header">
+        <h1>Custom Business Solutions</h1>
+    </div>
+    <div class="form-body">
+        <h2>Employment Application</h2>
+        <p>Please asssit in verifying your information. All information is strictly confidential.</p>
+    </div>
+    <div class="form-body">
+        <h3>Personal Information</h3>
+        <div class="information">
+            <label for="prefix">Prefix</label>
+            <select id="prefix">
+                <option>Other</option>
+                <option>Mr</option>
+                <option>Mrs</option>
+                <option>Ms</option>
+            </select>
+        </div>
+        
+        <div class="information">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname">
+        </div>
+        <div class="information">
+            <label for="middle">Middle</label>
+            <input type="text" id ="middle">
+        </div>
+        <div class="information">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname">
+        </div>
+        <div class="information">
+            <label for="ssn">Last 4 of SSN</label>
+            <input type="text" id="ssn">
+        </div>
+        <div class="information">
+            <label for="homeaddress">Home Street Address</label>
+            <input type="text" id="homeaddress">
+        </div>
+        <div class="information">
+            <label for="city">City</label>
+            <input type="text" id="city">
+        </div>
+        <div class="information">
+            <label for="state">State</label>
+            <input type="text" id="state">
+        </div>
+        <div class="information">
+            <label for="postalcode">Postal Code</label>
+            <input type="text" id="postalcode">
+        </div>
+        <div class="information">
+            <label for="homephone">Home Phone</label>
+            <input type="text" id="homephone">
+        </div>
+        <div class="information">
+            <label for="cellphone">Cell Phone</label>
+            <input type="text" id-"cellphone">
+        </div>
+        <div class="information">
+            <label for="personalemail">Personal Email</label>
+            <input type="text" id="personalemail">
+        </div>
+        <div class="information">
+            <label for="residentstatus">Resident Status</label> 
+            <select id="resident status">
+                <option>Citizen</option>
+                <option>Permanent Resident</option>
+                <option>Non-Citizen</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox"> 
+            <label>I am willing to relocate</label>
+        </div>
+        <div class="information">
+            <label for="firstchoice">Location First Choice</label>
+            <input type="text" id="firstchoice">
+        </div>
+        <div class="information">
+            <label for="secondchoice">Location Second Choice</label>
+            <input type="text" id="secondchoice">
+        </div>
+    </div>
+    <div class="form-body">
+        <h3>Employment</h3>
+        <div class="information">
+            <label for="positiondesired">Position Desired</label>
+            <input type="text" id="positiondesired" ng-model="positiondesired">
+        </div>
+        
+        <div class="information">
+            <label for="desiredpayfrom">Desired Pay From</label>
+            <input type="text" id="desiredpayfrom">
+        </div>
+        <div class="information">
+            <label for="desiredpayto">Desired Pay To</label>
+            <input type="text" id ="desiredpayto">
+        </div>
+        <div class="information">
+            <label for="availabletostart">Available To Start</label>
+            <input type="text" id="availabletostart">
+        </div>
+
+        <div>
+            <input type="checkbox"> 
+            <label>Have you worked for Custom Business Solutions in the past</label>
+        </div>
+        <div class="information">
+            <label for="yesprevious">If Yes, when?</label>
+            <input type="text" id="yesprevious">
+        </div>
+        <br>
+        <div class="information">
+            <label for="willingtotravel">Please indicate your willingness to travel</label>
+            <input type="text" id="willingtotravel">
+        </div>
+    </div>
+    <div class="form-body">
+        <h3>Employment History</h3>
+
+        <p>Current/Most Recent Employer</p>
+
+        <!-- This section needs to repeat 3x-->
+        <div class="information">
+            <label for="company">Company</label>
+            <input type="text" id="company">
+        </div>
+        
+        <div class="information">
+            <label for="title">Title</label>
+            <input type="text" id="title">
+        </div>
+        <div class="information">
+            <label for="endingsalary">Ending Salary</label>
+            <input type="text" id ="endingsalary">
+        </div>
+        <div class="information">
+            <label for="manager">Manager</label>
+            <input type="text" id="manager">
+        </div>
+        <div class="information">
+            <label for="datestarted">Date Started</label>
+            <input type="text" id="datestarted">
+        </div>
+        <div class="information">
+            <label for="dateleft">Date Left</label>
+            <input type="text" id="dateleft">
+            <label>(Leave date blank if you are still employed)</label>
+        </div>
+        <div class="information">
+            <label for="reason">Reason for leaving/looking</label>
+            <input type="text" id="reason">
+        </div>
+
+        <div class="information">
+            <label for="contactemployer">May we contact above listed employer?</label>
+            <select id="contactemployer">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
+        <div class="information">
+            <label for="laterdate">If we may, at a later date, please indicate when.</label>
+            <input type="text" id="laterdates">
+        </div>
+    </div>
+    <div class="form-body">
+        <h3>Professional References</h3>
+        <p>Please list below the names and contact information for three technical/peer references.</p><br>
+
+        <div class="information">
+            <label for="referencenames">Name</label>
+            <input type="text" id="referencenames"><br>
+            <input type="text" id="referencenames"><br>
+            <input type="text" id="referencenames"><br>
+        </div>
+        <div class="information">
+            <label for="referencecompany">Company</label>
+            <input type="text" id="referencecompany"><br>
+            <input type="text" id="referencecompany"><br>
+            <input type="text" id="referencecompany"><br>
+        </div>
+        <div class="information">
+            <label for="referenceposition">Postion/Title</label>
+            <input type="text" id="referenceposition"><br>
+            <input type="text" id="referenceposition"><br>
+            <input type="text" id="referenceposition"><br>
+        </div>
+        <div class="information">
+            <label for="referencephone">Phone Number</label>
+            <input type="text" id="referencephone"><br>
+            <input type="text" id="referencephone"><br>
+            <input type="text" id="referencephone"><br>
+        </div>
+    </div> 
+    <div class="form-body">
+        <div>
+            <input type="checkbox">
+            <label>Is any additional information relative to change of name, use of name, 
+                use of an assumed name, or nickname necessary to enable Custom Business Solutions to check your work record?
+                If Yes, Please explain.</label>
+            <input type="text">
+        </div>
+        <div>
+            <label>Why are you considering leaving your present position?</label>
+            <input type="text">
+        </div>
+        <div>
+            <input type="checkbox">
+            <label>Do you have any non-compete or non-solicitation agreements which are currently in effect and which
+                are currently in effect and which would prohibit you from accepting the position or from performing
+                the job for which you are applying? If Yes, please explain.</label>
+            <input type="text">
+        </div>
+        <div>
+            <input type="checkbox">
+            <label>Do you have Security Clearance? If yes, please specify level of clearance 
+                and if current.
+            </label>
+            <input type="text">
+        </div>
+        <div>
+            <input type="checkbox">
+            <label>Have you ever has an access Authorization (Security Clearance) suspended, denied or revoked?
+                If Yes, please indicate below the level of clearance, when and by whom.
+            </label>
+            <input type="text">
+        </div>
+        <div>
+            <label>If you have since been granted clearance; please indicate below the date, level, and who restored the clearance</label>
+            <input type="text">
+        </div>
+        <div>
+            <label>Have you ever been convicted of a felony?</label>
+            <input type="text" value="If Yes, please explain.">
+        </div>
+        <div class="information">
+            <label>How were you referred to Custom Business Solutions?</label>
+            <select>
+                <option>Recruiter</option>
+                <option>Employee</option>
+                <option>Other</option>
+            </select>
+            <input type="text" value="If Other, please explain.">
+        </div>
+    </div>
+    <div class="form-body">
+        <h4>Note To All Applicants:</h4>
+        <p>Please note that, in accordance with Federal Immigration Laws, if you are made an offer of employment by Custom Business Solutions, and you accept, you will be required to provide proof of identity and proof of employment eligibility in the United States within three (3) days of your acceptance of the offer from Custom Business Solutions. Custom Business Solutions adheres to all applicable federal, state and local antidiscrimination laws.</p>
+        <p>We are an Equal Opportunity Firm (M/F/V/H)</p>
+        <p>IMPORTANT ALL APPLICANTS MUST READ AND ACCEPT THE FOLLOWING STATEMENTS</p>
+        <p>I hereby state that the information on this application is accurate. I understand that any omission or misrepresentation of any facts, or provision of any misleading or incorrect information may render this application void or may result in immediate termination for cause in the event of my employment by Custom Business Solutions</p>
+        <p>I hereby give permission to Custom Business Solutions (or its duly appointed representative) to contact any person or companies on this application that I have indicated may be contacted, in order to make any investigation of my background deemed necessary. I understand that if I am presently employed, verification of my present salary, position, and years of service may be required in the event of my employment at Custom Business Solutions. Also, verification of my educational history will take place.</p>
+        <p>I further state that in consideration of my employment by Custom Business Solutions, I agree to conform to the rules and regulation of the Company, and I understand that my employment can be terminated at any time, for any reason, at the option of either the Company or myself. I understand that no individual or representation of Custom Business Solutions other than the President has any authority to enter into any employment agreement with me specifies any specific period of employment or which alters any of the foregoing statements. I understand any such employment agreement with the President must be in writing and signed by the President to be valid. Finally, I certify that in filling this application, or accepting employment with Custom Business Solutions if offered, I have not relied upon any oral statement which would alter any of the foregoing.</p>
+        <input type="text">
+        <input type="text" value="Today's Date">
+    </div>
+</body>
+
+</html>

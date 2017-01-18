@@ -1,0 +1,15 @@
+.information input, label {
+    display:block;
+}
+
+label {
+    font-size: 12px;
+}
+
+.information {
+    display: inline-block;
+}
+
+input[type="checkbox"] {
+    float: left; margin-top: 5px;
+}
